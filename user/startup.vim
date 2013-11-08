@@ -1,0 +1,92 @@
+" バックアップ関連
+" savevers.vim をインストールすれば世代別のバックアップも可能
+set backupdir=$HOME/.tmp/vim
+let &directory = &backupdir
+
+set nocompatible
+
+" 文字コード関連
+"
+"   ファイルを UTF-8 で開き直す方法
+"   map utf8 e ++enc=utf-8
+"   http://sites.google.com/site/fudist/Home/vim-nihongo-ban/mojibake
+
+set encoding=utf8
+command UTF8 set fileencoding=utf8
+command SJIS set fileencoding=shift_jis
+command JIS set fileencoding=iso-2022-jp
+command EUC set fileencoding=euc-jp
+set statusline=%f\ %{'['.(&fenc!=''?&fenc:'?').'-'.&ff.']'}
+
+set fileformats=unix,dos,mac
+set formatoptions=q
+
+" 今は使っていない人気の設定
+" あらかじめ ~/.vim に以下のファイルをコピーすること
+" encode_japan.vim
+
+" 編集のための設定
+set backspace=indent,eol,start
+set showmatch
+set autoindent
+set smartindent
+set expandtab
+set tabstop=8
+set shiftwidth=2
+" set textwidth=0
+
+" AquaSKK のために
+set imdisable
+inoremap <silent> <C-j> <C-^>
+
+" 検索関係
+set smartcase
+set noincsearch
+set nocp
+set nohlsearch
+" <Return> で最後の検索結果のハイライトを消去する．
+nnoremap <CR> :nohlsearch<CR><CR>
+
+let g:loaded_matchparen=1
+
+" コマンドライン補完するときに補完候補を表示する
+set wildmenu
+
+" お気に入りのファイルをキーを2つ入力しただけで開く
+" マーク: m[A-Z], ジャンプ: '[A-Z]
+" set viminfo += f1
+
+" 畳み込み
+set foldmethod=marker
+
+
+" □■
+set ambiwidth=double
+
+" コマンド
+command Write cd research/mypaper/wakita-socmedvis2012/kw
+
+" キーバインディング
+" map <C-S-N> :next<CR>
+" map <C-S-P> :bprevious<CR>
+
+" OMake 関連
+map \om :w:!omake
+map \or :w:!omake run
+
+" TeX 関連
+map <F2> :!x
+map <F3> :!x 
+
+map <silent> <F2> :bp<cr>
+map <silent> <F3> :bn<cr>
+nmap \b :ls<cr>:buf 
+
+" for Bluetooth keyboard for iPad/iPhone
+imap qq 
+
+" プラグインの管理 (Pathogen)
+execute pathogen#infect()
+filetype plugin indent on
+
+syntax off
