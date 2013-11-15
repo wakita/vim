@@ -4,3 +4,6 @@ let NERDTreeIgnore = ['\.[oa]$', '\.cm[aiox]$', '\.cmxa$', '\.\(aux\|bbl\|blg\|d
 " nerdtree が提示するファイルの順番を OSX と同じにしたい
 let NERDTreeSortOrder = [ '*', '^\..*' ]
 " au VimEnter * NERDTreeToggle /Users/wakita/Dropbox
+
+" NERDTreeでルートを変更したらchdirする
+let g:NERDTreeChDirMode = 2
