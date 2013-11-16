@@ -33,7 +33,7 @@ set smartindent
 set expandtab
 set tabstop=8
 set shiftwidth=2
-" set textwidth=0
+set textwidth=0
 
 " AquaSKK のために
 set imdisable
