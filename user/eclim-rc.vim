@@ -4,3 +4,5 @@
 " 2. mkdir $VIMRC/bundle/eclim
 " 3. eclim のインストーラ eclim_*.*.*.jar をダウンロードして起動
 " 4. eclim のインストーラが訊ねる .vim の場所として $VIMRC/bundle/eclim を指示
+
+let g:EclimJavascriptValidate=0
