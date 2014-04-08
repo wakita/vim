@@ -16,6 +16,7 @@ command UTF8 set fileencoding=utf8
 command SJIS set fileencoding=shift_jis
 command JIS set fileencoding=iso-2022-jp
 command EUC set fileencoding=euc-jp
+command UNIX set fileformat=unix
 set statusline=%f\ %{'['.(&fenc!=''?&fenc:'?').'-'.&ff.']'}
 
 set fileformats=unix,dos,mac
@@ -34,6 +35,17 @@ set expandtab
 set tabstop=8
 set shiftwidth=2
 set textwidth=0
+
+function! local:disableAutoBreak()
+  set wrap
+  set textwidth=0
+  set wrapmargin=0
+" set linebreak
+" set nolist " list disables linebreak
+" set fo-=5
+endfunction
+
+:au BufNewFile,BufRead *.* call local:disableAutoBreak()
 
 " AquaSKK のために
 set imdisable
@@ -74,13 +86,9 @@ command Write cd research/mypaper/wakita-socmedvis2012/kw
 map \om :w:!omake
 map \or :w:!omake run
 
-" TeX 関連
-map <F2> :!x
-map <F3> :!x 
-
-map <silent> <F2> :bp<cr>
-map <silent> <F3> :bn<cr>
-nmap \b :ls<cr>:buf 
+"map <silent> <F2> :bp<cr>
+"map <silent> <F3> :bn<cr>
+"nmap \b :ls<cr>:buf 
 
 " for Bluetooth keyboard for iPad/iPhone
 imap qq 
