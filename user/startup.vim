@@ -22,6 +22,8 @@ set statusline=%f\ %{'['.(&fenc!=''?&fenc:'?').'-'.&ff.']'}
 set fileformats=unix,dos,mac
 set formatoptions=q
 
+command QL !qlmanage -p % >& /dev/null &
+
 " 今は使っていない人気の設定
 " あらかじめ ~/.vim に以下のファイルをコピーすること
 " encode_japan.vim
