@@ -73,7 +73,6 @@ set wildmenu
 " 畳み込み
 set foldmethod=marker
 
-
 " □■
 set ambiwidth=double
 
@@ -94,6 +93,11 @@ map \or :w:!omake run
 
 " for Bluetooth keyboard for iPad/iPhone
 imap qq 
+
+"Markdown settings"
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+command MarkdownView !mmdview %
+"autocmd FileType map
 
 " プラグインの管理 (Pathogen)
 execute pathogen#infect()
