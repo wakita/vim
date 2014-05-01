@@ -3,6 +3,8 @@
 set backupdir=$HOME/.tmp/vim
 let &directory = &backupdir
 
+set runtimepath+=$VIMRUNTIME/../plugins/vimdoc-ja
+
 set nocompatible
 
 " 文字コード関連
@@ -50,7 +52,8 @@ endfunction
 :au BufNewFile,BufRead *.* call local:disableAutoBreak()
 
 " AquaSKK のために
-set imdisable
+" set imdisable
+" set noimdisableactivate
 inoremap <silent> <C-j> <C-^>
 
 " 検索関係
