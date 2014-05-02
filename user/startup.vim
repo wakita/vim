@@ -101,6 +101,10 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 command MarkdownView !mmdview %
 "autocmd FileType map
 
+" Manual
+
+runtime ftplugin/man.vim
+
 " プラグインの管理 (Pathogen)
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
