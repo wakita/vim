@@ -1,7 +1,8 @@
 " バックアップ関連
 " savevers.vim をインストールすれば世代別のバックアップも可能
-set backupdir=$HOME/.tmp/vim
+set backupdir=$HOME/.tmp/vim/backup
 let &directory = &backupdir
+set undodir=$HOME/.tmp/vim/undo
 
 set nocompatible
 
@@ -85,8 +86,10 @@ command Write cd research/mypaper/wakita-socmedvis2012/kw
 " map <C-S-P> :bprevious<CR>
 
 " OMake 関連
-map \om :w:!omake
-map \or :w:!omake run
+map \om :w
+:!omake
+map \or :w
+:!omake run
 
 "map <silent> <F2> :bp<cr>
 "map <silent> <F3> :bn<cr>
