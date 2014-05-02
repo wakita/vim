@@ -3,8 +3,6 @@
 set backupdir=$HOME/.tmp/vim
 let &directory = &backupdir
 
-set runtimepath+=$VIMRUNTIME/../plugins/vimdoc-ja
-
 set nocompatible
 
 " 文字コード関連
@@ -16,8 +14,8 @@ set nocompatible
 set encoding=utf8
 command UTF8 set fileencoding=utf8
 command SJIS set fileencoding=shift_jis
-command JIS set fileencoding=iso-2022-jp
-command EUC set fileencoding=euc-jp
+command JIS  set fileencoding=iso-2022-jp
+command EUC  set fileencoding=euc-jp
 command UNIX set fileformat=unix
 set statusline=%f\ %{'['.(&fenc!=''?&fenc:'?').'-'.&ff.']'}
 
