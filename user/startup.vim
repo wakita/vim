@@ -86,10 +86,8 @@ command Write cd research/mypaper/wakita-socmedvis2012/kw
 " map <C-S-P> :bprevious<CR>
 
 " OMake 関連
-map \om :w
-:!omake
-map \or :w
-:!omake run
+map \om :w:!omake
+map \or :w:!omake run
 
 "map <silent> <F2> :bp<cr>
 "map <silent> <F3> :bn<cr>
@@ -104,6 +102,7 @@ command MarkdownView !mmdview %
 "autocmd FileType map
 
 " プラグインの管理 (Pathogen)
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 filetype plugin indent on
 
