@@ -17,7 +17,6 @@ endfu
 
 func! WordProcessorMode() 
   setlocal formatoptions=1 
-  setlocal noexpandtab 
   map j gj 
   map k gk
   set spelllang=en_us
@@ -25,8 +24,8 @@ func! WordProcessorMode()
   set thesaurus+=$DROPBOX/lib/dict/mthes10/mthesaur.txt
   setlocal complete+=k/usr/share/dict/web2
 " set formatprg=par
-" setlocal wrap 
-" setlocal linebreak 
+  setlocal wrap 
+  setlocal linebreak 
 endfu 
 
 com! WP call WordProcessorMode()
