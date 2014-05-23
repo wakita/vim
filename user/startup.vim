@@ -98,7 +98,7 @@ imap qq 
 
 "Markdown settings"
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-command MarkdownView !mmdview %
+command MarkdownView !markdown preview "%:p"
 "autocmd FileType map
 
 " Manual
