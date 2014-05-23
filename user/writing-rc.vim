@@ -48,7 +48,7 @@ func! WritersMode()
   let g:languagetool_jar="$DROPBOX/Applications/LanguageTool-2.1/languagetool-commandline.jar"
   let g:languagetool_lang='en-US'
 
-  "文法検査"
+  "文法検査 (help languagetool)"
     "メニュー> Plugin> LanguageTool> {Check|Clear}"
     ":GC   バッファ内の文法検査"
     ":GCX  文法検査を停止"

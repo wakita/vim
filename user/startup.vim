@@ -78,9 +78,6 @@ set foldmethod=marker
 " □■
 set ambiwidth=double
 
-" コマンド
-command Write cd research/mypaper/wakita-socmedvis2012/kw
-
 " キーバインディング
 " map <C-S-N> :next<CR>
 " map <C-S-P> :bprevious<CR>
