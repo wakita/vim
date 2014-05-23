@@ -23,10 +23,10 @@ func! WordProcessorMode()
   set spelllang=en_us
   set spellfile=$DROPBOX/lib/dict/ken.en.add
   set thesaurus+=$DROPBOX/lib/dict/mthes10/mthesaur.txt
-  set complete+=s
-  set formatprg=par
-  setlocal wrap 
-  setlocal linebreak 
+  setlocal complete+=k/usr/share/dict/web2
+" set formatprg=par
+" setlocal wrap 
+" setlocal linebreak 
 endfu 
 
 com! WP call WordProcessorMode()
