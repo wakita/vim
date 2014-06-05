@@ -1,5 +1,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Seth Brown, Wrinting in Vim, Dec. 4, 2011.
 " Writing in Vim (http://www.drbunsen.org/writing-in-vim/) "
+"
+" Joe Brockmeier, Using Spell Checking in Vim, Linux.com, Sep. 1, 2010.
+" http://www.linux.com/learn/tutorials/357267:using-spell-checking-in-vim
 
 
 
@@ -32,7 +36,7 @@ func! WritersMode()
   setlocal wrapmargin=0
 
   "行が長くなり，複数行にわたって表示される場合に，上下方向のカーソルの移動を楽にする．"
-  map j gj 
+  map j gj
   map k gk
 
   "組込みの綴り辞書を利用した単語補完"
@@ -66,8 +70,8 @@ com! Write call WritersMode()
 
 func! ToggleSpellMode()
     "z=  正しい綴りを提示"
-    "]s  次の綴りの間違い"
-    "[s  前の綴りの間違い"
+    "]s  次の綴りの間違いに移動"
+    "[s  前の綴りの間違いに移動"
     "zg  カーソルの下の単語の綴りを辞書(spellfile)に登録"
     "zw  カーソルの下の単語を間違った綴りとして辞書に登録"
     "zug, zuw  zgやzwのundo"
