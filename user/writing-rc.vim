@@ -49,8 +49,9 @@ func! WritersMode()
   "類義語辞書: 類義語辞書の参照は C-x C-t"
   set thesaurus+=$DROPBOX/lib/dict/mthes10/mthesaur.txt
 
-  let g:languagetool_jar="$DROPBOX/Applications/LanguageTool-2.1/languagetool-commandline.jar"
+  let g:languagetool_jar="$HOME/Dropbox/Applications/LanguageTool-2.5/languagetool-commandline.jar"
   let g:languagetool_lang='en-US'
+  let g:languagetool_disable_rules='WHITESPACE_RULE,EN_QUOTES,MORFOLOGIK_RULE_EN_US'
 
   "文法検査 (help languagetool)"
     "メニュー> Plugin> LanguageTool> {Check|Clear}"
