@@ -1,9 +1,16 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Seth Brown, Wrinting in Vim, Dec. 4, 2011.
 " Writing in Vim (http://www.drbunsen.org/writing-in-vim/) "
+"     このスクリプトの大部分はこの記事を参考にして作りました．
 "
 " Joe Brockmeier, Using Spell Checking in Vim, Linux.com, Sep. 1, 2010.
 " http://www.linux.com/learn/tutorials/357267:using-spell-checking-in-vim
+"     とてもよくまとまった解説記事
+"
+" ジロカ, MacVimで辞書を呼び出す話, Apr 24, 2013.
+" http://jiroukaja-memo.hatenablog.com/entry/2013/04/24/221542
+" https://gist.github.com/jiroukaja/5451829
+"     :Dictコマンドで辞書を呼び出す機能
 
 
 
@@ -26,6 +33,7 @@
 
 """""""""""""""""
 " Writer's Mode "
+" 主にSeth Brownさんの記事より
 
 func! WritersMode() 
 " set formatprg=par
@@ -68,6 +76,7 @@ com! Write call WritersMode()
 
 """""""""""""""""""""""""""""""
 " Spell checking (help spell) "
+" Vim 7の組込みの機能
 
 func! ToggleSpellMode()
     "z=  正しい綴りを提示"
@@ -86,8 +95,11 @@ endfu
 
 com! Spell call ToggleSpellMode()
 
+
+
 """""""""""""""""""""""""""""""
-" Dictionary lookup
+" Dictionary lookup (:Dict)
+" ジロカさんありがとうございます
 
 function! s:dict(...)
   let is_macunix = has('mac') || has('macunix') || has('gui_macvim') || (!executable('xdg-open') && system('uname') =~? '^darwin')
