@@ -84,3 +84,20 @@ func! ToggleSpellMode()
 endfu
 
 com! Spell call ToggleSpellMode()
+
+"""""""""""""""""""""""""""""""
+" Dictionary lookup
+
+function! s:dict(...)
+  let is_macunix = has('mac') || has('macunix') || has('gui_macvim') || (!executable('xdg-open') && system('uname') =~? '^darwin')
+  if(!is_macunix)
+    echohl WarningMsg
+    echomsg 'Your platform is not supported!'
+    echohl None
+    finish
+  endif
+  let word = len(a:000) == 0 ? input('Dictionary search: ', expand('<cword>')) : join(a:000, ' ')
+  call system(printf("open dict://'%s'", word))
+endfunction
+
+command! -nargs=* Dict call <SID>dict(<f-args>)
