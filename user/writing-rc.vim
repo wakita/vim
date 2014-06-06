@@ -114,3 +114,5 @@ function! s:dict(...)
 endfunction
 
 command! -nargs=* Dict call <SID>dict(<f-args>)
+
+command Paper1 cd $MYPAPER/$PAPER1
