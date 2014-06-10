@@ -43,6 +43,11 @@ func! WritersMode()
   setlocal textwidth=0
   setlocal wrapmargin=0
 
+  if has('gui_macvim')
+    set guifont=Menlo:h24
+    set columns=100
+  endif
+
   "行が長くなり，複数行にわたって表示される場合に，上下方向のカーソルの移動を楽にする．"
   map j gj
   map k gk
