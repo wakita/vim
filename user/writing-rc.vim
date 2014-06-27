@@ -68,11 +68,11 @@ func! WritersMode()
 
   "文法検査 (help languagetool)"
     "メニュー> Plugin> LanguageTool> {Check|Clear}"
-    ":GC   バッファ内の文法検査"
-    ":GCX  文法検査を停止"
+    ":Grammar   バッファ内の文法検査"
+    ":GrammarX  文法検査を停止"
 
-  com! GC LanguageToolCheck
-  com! GCX LanguageToolClear
+  com! Grammar  LanguageToolCheck
+  com! GrammarX LanguageToolClear
 endfu 
 
 com! Write call WritersMode()
