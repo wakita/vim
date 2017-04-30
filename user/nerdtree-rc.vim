@@ -7,3 +7,5 @@ let NERDTreeSortOrder = [ '*', '^\..*' ]
 
 " NERDTreeでルートを変更したらchdirする
 let g:NERDTreeChDirMode = 2
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>

@@ -39,7 +39,8 @@ set tabstop=8
 set shiftwidth=2
 set textwidth=0
 
-function! local:disableAutoBreak()
+"function! local:DisableAutoBreak()
+function! s:DisableAutoBreak()
   set wrap
   set textwidth=0
   set wrapmargin=0
@@ -48,7 +49,7 @@ function! local:disableAutoBreak()
 " set fo-=5
 endfunction
 
-:au BufNewFile,BufRead *.* call local:disableAutoBreak()
+:au BufNewFile,BufRead *.* call s:DisableAutoBreak()
 
 " AquaSKK のために
 " set imdisable

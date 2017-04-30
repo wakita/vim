@@ -1,0 +1,32 @@
+writing_rc.txt     For Vim version 7.3     Last change: 2014 June 1
+
+" A few key Vim commands that are vital to efficient word processing"
+
+" 3diw    Delete inside the current word and the next two words"
+" dwwP    Swap the current word with the next word"
+" d?foo   Delete from the cursor to the previous string “foo”"
+" ct.     Change from the cursor until the next period"
+" d^      Delete from the cursor to the beginning of the line"
+" d>D     Delete from the cursor to the end of the line"
+" 2J      Join the current line with the line below"
+" das     Delete around the current sentence"
+" c(      Change from the cursor to the begining of a sentence"
+" >}      Go to the end of the current paragraph"
+" dapP    Swap current paragraph with the next paragraph"
+
+
+
+  "類義語辞書: 類義語辞書の参照は C-x C-t"
+
+  "文法検査 (help languagetool)"
+    "メニュー> Plugin> LanguageTool> {Check|Clear}"
+    ":GC   バッファ内の文法検査"
+    ":GCX  文法検査を停止"
+
+  "Spell"
+    "z=  正しい綴りを提示"
+    "]s  次の綴りの間違い"
+    "[s  前の綴りの間違い"
+    "zg  カーソルの下の単語の綴りを辞書(spellfile)に登録"
+    "zw  カーソルの下の単語を間違った綴りとして辞書に登録"
+    "zug, zuw  zgやzwのundo"
