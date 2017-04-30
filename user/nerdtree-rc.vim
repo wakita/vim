@@ -9,3 +9,6 @@ let NERDTreeSortOrder = [ '*', '^\..*' ]
 let g:NERDTreeChDirMode = 2
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+command C NERDTree c:\
+command D NERDTree d:\
