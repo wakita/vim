@@ -4,6 +4,8 @@ set backupdir=$HOME/.tmp/vim/backup
 let &directory = &backupdir
 set undodir=$HOME/.tmp/vim/undo
 
+" set cdpath=$HOME/Dropbox/research,$HOME/Dropbox/work/opengl
+
 set nocompatible
 
 " 文字コード関連
@@ -39,7 +41,7 @@ set tabstop=8
 set shiftwidth=2
 set textwidth=0
 
-function! local:disableAutoBreak()
+function! s:disableAutoBreak()
   set wrap
   set textwidth=0
   set wrapmargin=0
@@ -48,7 +50,7 @@ function! local:disableAutoBreak()
 " set fo-=5
 endfunction
 
-:au BufNewFile,BufRead *.* call local:disableAutoBreak()
+:au BufNewFile,BufRead *.* call s:disableAutoBreak()
 
 " AquaSKK のために
 " set imdisable
