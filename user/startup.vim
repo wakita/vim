@@ -104,7 +104,7 @@ command MarkdownView !markdown preview "%:p"
 runtime ftplugin/man.vim
 
 " プラグインの管理 (Pathogen)
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 filetype plugin indent on
 
