@@ -4,6 +4,8 @@ set backupdir=$HOME/.tmp/vim/backup
 let &directory = &backupdir
 set undodir=$HOME/.tmp/vim/undo
 
+" set cdpath=$HOME/Dropbox/research,$HOME/Dropbox/work/opengl
+
 set nocompatible
 
 " 文字コード関連
@@ -104,7 +106,7 @@ command MarkdownView !markdown preview "%:p"
 runtime ftplugin/man.vim
 
 " プラグインの管理 (Pathogen)
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 filetype plugin indent on
 
