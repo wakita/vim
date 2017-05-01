@@ -24,7 +24,7 @@ cp Dropbox/lib/vim/user/init_gui.vim   $HOME/.gvimrc
 mkdir -p $HOME/.tmp/vim/{backup,undo}
 ```
 
-プラグインごとの設定は user/&lt;plugin&gt;-rc.vimに設定すれば，自動的に読み込まれるようにしています．
+プラグインごとの設定は `user/<plugin>-rc.vim` あるいは、`user/gui/<plugin>-rc.vim` に設定すれば，自動的に読み込まれるようにしています．なお、`user/gui/`はGUI版のVim (gvim や MacVim) のための設定です。`user/initialize.vim`や`user/gui/initialize.vim`のなかの`runtime!`命令を参照。
 
 -----
 # パッケージの管理
