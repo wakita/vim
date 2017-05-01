@@ -1,0 +1,11 @@
+#!/bin/sh
+
+cd $DROPBOX/lib/vim/bundle
+for package in *; do
+  if [ -d $package/.git ]; then
+    (echo $package
+     cd $package
+     git fetch origin
+     git reset --hard origin/master)
+  fi
+done
