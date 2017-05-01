@@ -24,7 +24,7 @@ set fileformats=unix,dos,mac
 set formatoptions=q
 
 " QuickLook のプレビューを表示
-if has('mac'):
+if has('mac')
   command QL !qlmanage -p % >& /dev/null &
 endif
 
