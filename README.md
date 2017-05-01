@@ -44,7 +44,7 @@ mkdir -p $HOME/.tmp/vim/{backup,undo}
 | ★[languagetool](https://github.com:vim-scripts/LanguageTool.git) | 英語構文検査 |
 | ★★[nerdtree](https://github.com/scrooloose/nerdtree.git) | ファイルブラウザ |
 | [ctrlp](https://github.com/kien/ctrlp.vim.git) | 使い熟していないけど、人気が高い |
-| [gundo](https://github.com/sjl/gundo.vim.git) | Vimのアウドゥ木を可視化する。なぜインストールしたのかわからない。
+| [gundo](https://github.com/sjl/gundo.vim.git) | Vimのアンドゥ木を可視化する。なぜインストールしたのかわからない。
 | 言語設定         | 各種プログラミング言語のインデント、ハイライトなど |
 | [clang_complete](https://github.com:Rip-Rip/clang_complete.git) | C/C++ |
 | [fswitch](https://github.com/derekwyatt/vim-fswitch.git) | maven流のディレクトリ構造のなかでソースとテストのファイルを簡単に行き来． |
