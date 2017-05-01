@@ -23,7 +23,10 @@ set statusline=%f\ %{'['.(&fenc!=''?&fenc:'?').'-'.&ff.']'}
 set fileformats=unix,dos,mac
 set formatoptions=q
 
-command QL !qlmanage -p % >& /dev/null &
+" QuickLook のプレビューを表示
+if has('mac'):
+  command QL !qlmanage -p % >& /dev/null &
+endif
 
 " 今は使っていない人気の設定
 " あらかじめ ~/.vim に以下のファイルをコピーすること
@@ -91,7 +94,7 @@ map \or :w:!omake run
 "map <silent> <F3> :bn<cr>
 "nmap \b :ls<cr>:buf 
 
-" for Bluetooth keyboard for iPad/iPhone
+" ESCキーのない iOS 用の Bluetooth keyboard のための設定（もう、いらないかも）
 imap qq 
 
 "Markdown settings"

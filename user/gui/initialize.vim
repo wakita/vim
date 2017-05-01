@@ -1,3 +1,3 @@
 "Copy this file to $HOME/.gvimrc"
 
-runtime user/guioptions.vim
+runtime! user/gui/*-rc.vim

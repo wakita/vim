@@ -44,7 +44,7 @@ func! WritersMode()
   setlocal wrapmargin=0
 
   if has('gui_macvim')
-    set guifont=Menlo:h24
+    set guifont=Menlo:h18
     set columns=100
   endif
 
