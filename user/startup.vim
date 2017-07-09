@@ -1,3 +1,10 @@
+"set pythonthreehome=/Users/wakita/anaconda3/envs/python36
+"set pythonhome=/Users/wakita/anaconda3/envs/python36
+"set pythonthreedll=/Users/wakita/anaconda3/envs/python36/lib/libpython3.5m.dylib
+
+"if has('python3')
+"endif
+
 " バックアップ関連
 " savevers.vim をインストールすれば世代別のバックアップも可能
 set backupdir=$HOME/.tmp/vim/backup
