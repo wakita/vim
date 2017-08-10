@@ -1,4 +1,5 @@
-"Copy this file to $HOME/.vimrc"
+" mkdir -p .tmp/vim/{backup,undo}
+" cp <this file> $HOME/.vimrc"
 
 set runtimepath=$DROPBOX/lib/vim,$VIM,$VIMRUNTIME
 let $MYVIMRC="$DROPBOX/lib/vim/user/startup.vim"

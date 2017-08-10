@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export PYTHONHOME=$HOME/anaconda3/envs/python35
+export PYTHONPATH=$PYTHONHOME/lib
+PATH=$PYTHONHOME/bin:$PATH
+
+mvim $*
